@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Задача №6</h1>
+    <p>
+        З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. Обчислити вартість кожного товару окремо та загальну вартість. Вивести чек (як у супермаркеті) використовуючи елементи розмітки.
+    </p>    
+        
+    <script>
+
+        //Крок 1. Введення даних.
+        const priceStuff1 = parseFloat(prompt(`введіть ціну товару №1`))
+        const quantityStuff1 = parseInt(prompt(`введіть кількість товару №1`))
+        const priceStuff2 = parseFloat(prompt(`введіть ціну товару №2`))
+        const quantityStuff2 = parseInt(prompt(`введіть кількість товару №2`))
+        const priceStuff3 = parseFloat(prompt(`введіть ціну товару №3`))
+        const quantityStuff3 = parseInt(prompt(`введіть кількість товару №3`))
+
+        //Крок 2. Обчислення результату.
+        const sumStuff1 = priceStuff1 * quantityStuff1;
+        const sumStuff2 = priceStuff2 * quantityStuff2
+        const sumStuff3 = priceStuff3 * quantityStuff3
+        const summaryStuff = sumStuff1 + sumStuff2 + sumStuff3
+
+        //Крок 3. Виведення результатів.
+        document.write(`товар №1: ${quantityStuff1} x ${priceStuff1.toFixed(2)} грн = ${sumStuff1.toFixed(2)} грн <br>`);
+        document.write(`товар №2: ${quantityStuff2} x ${priceStuff2.toFixed(2)} грн = ${sumStuff2.toFixed(2)} грн <br>`);
+        document.write(`товар №3: ${quantityStuff3} x ${priceStuff3.toFixed(2)} грн = ${sumStuff3.toFixed(2)} грн <br>`);
+        document.write(`загальна вартість: ${summaryStuff.toFixed(2)} грн <br>`);
+    </script>
+</body>
+</html>
