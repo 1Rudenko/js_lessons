@@ -17,19 +17,16 @@
         const timeSec = parseInt(prompt(`Введіть кількість секунд`, `0`))
 
         //Крок 2. Обчислення результату.
-        // const timeMinute = timeSec / 60
-        const timeHour = timeSec / 3600
-        const timeMinute = (timeSec - parseInt(timeHour) * 3600) / 60
         
-        // const timeHour = timeMinute / 60
+        const timeHour = timeSec / 3600
+        
+        const timeMinute = timeSec % 3600 / 60
+        
         
         //Крок 3. Виведення результатів.
-        // document.write(`Тривалість у хвилинах: ${timeMinute} хв<br>`); 
-        // document.write(`Тривалість у годинах: ${timeHour} год`);
-        // document.write(`Тривалість: $(parseInt(timeHour) годин ${timeSec - })`);
-        // document.write(`Тривалість у хвилинах: ${timeMinute} хв<br>`);
-        // document.write(`Тривалість у годинах: ${timeHour} год<br>`);
-        document.write(`Тривалість: ${parseInt(timeHour)} годин ${parseInt(timeMinute)} хвилин`);
+       
+        document.write(`Тривалість: ${Math.floor(timeHour)} годин ${Math.floor(timeMinute)} хвилин`);
+
     </script>
 </body>
 </html>
