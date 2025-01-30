@@ -13,13 +13,15 @@
         
     <script>
         const driverCategory = prompt(`Введіть категорію водія A-C`)
-        let driverLicense = ``
+        let driverLicense 
         switch (driverCategory) {
             case `A` : driverLicense = `мотоцикл`
             break;
             case `B` : driverLicense = `легковий автомобіль`
             break;
-            default : driverLicense = `вантажний автомобіль`
+            case `C` : driverLicense = `вантажний автомобіль`
+            break;
+            default : driverLicense = `ходулі`
             break;
         }
         

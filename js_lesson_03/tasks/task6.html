@@ -15,25 +15,27 @@
 
 
         const dayWeek = parseInt(prompt(`Введіть номер дня тижня`))
+        let nameDayWeek
     
         switch (dayWeek) {
-            case 1 : document.write(`Понеділок`)
+            case 1 : nameDayWeek = `Понеділок`
             break;
-            case 2 : document.write(`Вівторок`)
+            case 2 : nameDayWeek = `Вівторок`
             break;
-            case 3 : document.write(`Середа`)
+            case 3 : nameDayWeek = `Середа`
             break;
-            case 4 : document.write(`Четвер`)
+            case 4 : nameDayWeek = `Четвер`
             break;
-            case 5 : document.write(`П'ятниця`)
+            case 5 : nameDayWeek = `П'ятниця`
             break;
-            case 6 : document.write(`Субота`)
+            case 6 : nameDayWeek = `Субота`
             break;
-            case 7 : document.write(`Неділя`)
+            case 7 : nameDayWeek = `Неділя`
             break;
-            default : document.write(`Невірно вказане число`)
+            default : nameDayWeek = `Невірно вказане число`
             break;
         }
+        document.write(nameDayWeek)
     
         
     </script>
