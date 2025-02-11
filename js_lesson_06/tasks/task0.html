@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Задача №0</h1>
+    <p>
+        Створити 10 елементів для введення цін продуктів
+    </p>    
+        
+    <script>
+    if (confirm('Почати тестування?')) {
+        let yourLetter = prompt(`put you letter`).charCodeAt()
+        for (let i = 1; i <= 5; i++) {
+            yourLetter++
+            document.write(`<br>`)
+            for (let j = 1; j <= 6; j++) {
+            // yourLetter.fromCharCode
+                document.write(`${yourLetter++} `)
+        }
+        
+    }
+    }
+
+
+    </script>
+</body>
+</html>
