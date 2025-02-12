@@ -13,23 +13,24 @@
     </p>    
         
     <script>
-if (confirm('Почати тестування?')) {
-    let userNumber = parseInt(prompt(`put number 1-10`))
-
-    for (let index = 1; index <= 3; index++) {
-        let computerNumber = 1 + Math.floor(Math.random() * 10)
-        console.log(computerNumber)
-        if(computerNumber === userNumber) {
-            document.write(`ok! я вгадав з ${index}спроби `)
+    if (confirm('Почати тестування?')) {
+        alert(`Загадайте число від 1 до 5`)
+        let compNumber
+        let correctAnswear = false
+        for (let i = 0; i < 3; i++) {
+            compNumber = 1 + Math.floor(Math.random()*5)
+        if (confirm(`Ваше число = ${compNumber}?`)) {
+            correctAnswear = true
             break
         }
-        if(computerNumber !== userNumber && index === 3) {
-            document.write(` я не вгадав `)
-            
-        }
     }
-    
-}
+
+    if (correctAnswear) {
+    document.write(`Ваше число = ${compNumber}`)
+    }
+    else document.write(`losser`)
+    }
+
     </script>
 </body>
 </html>
