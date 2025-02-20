@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Задача №2</h1>
+    <p>
+        Створити функцію, яка за номером дня дозволяє з’ясувати чи є цей день робочим.
+    </p>    
+        
+    <script>
+        if (confirm('Почати тестування?')) {
+            function getWeekDay() {
+                let numberDay = parseInt(prompt(`введіть номер дня тижня`)), weekDay
+                if (numberDay >= 1 && numberDay <= 5) {
+                    weekDay = `робочий`
+                }
+                else if (numberDay <= 7 ) {
+                    weekDay =`вихідний`
+                } 
+                else weekDay =`невірно вказане число`
+                return weekDay
+            }
+            
+            const w = getWeekDay()
+            document.write(w)
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Задача №5</h1>
+    <p>
+        Створити окремі функції, які переводять:
+            Сантиметри у дюйми;
+            Кілограми у фунти;
+            Кілометри у милі.
+
+    </p>    
+        
+    <script>
+        if (confirm('Почати тестування?')) {
+            function getFromSmToInch(smValue) {            
+                return Math.floor(smValue / 2.54)
+            }
+
+            function getFromKgToPound(kgValue) {            
+                return Math.floor(kgValue * 2.2046)
+            }
+
+            function getFromKmToMile(kmValue) {            
+                return Math.floor(kmValue * 0.6213)
+            }
+            const inchValue = getFromSmToInch(3)
+            const poundValue = getFromKgToPound(100)
+            const kmValue = getFromKmToMile(10)
+            document.write(` ${inchValue} дюймів <br> ${poundValue} фунтів <br> ${kmValue} миль`)
+        }
+        
+    </script>
+</body>
+</html>

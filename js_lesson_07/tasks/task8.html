@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Задача №8</h1>
+    <p>
+        Створити функцію, яка виводить банер у функцію передаються: зображення, заголовок та посилання, куди переходимо при кліку на зображення (тег img повине знаходитись у середині тега a)
+
+    </p>    
+        
+    <script>
+    if (confirm('Почати тестування?')) {
+        function getBanner() {
+            return `
+            <div>
+                <h1>Avocadocafe</h1>
+                <a href="https://www.avocadocafe.com.ua/">
+                    <img src="img/6.png" alt="avocado">
+                </a>
+            </div>
+            `             
+        }
+        const b = getBanner()
+        document.write(b)
+    }
+    
+
+
+    </script>
+</body>
+</html>
