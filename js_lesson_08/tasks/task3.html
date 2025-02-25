@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 8</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Задача №3</h1>
+    <p>
+        Дано масив імен учнів. З’ясувати скільки разів зустрічається ім’я «Іван».
+    </p>    
+        
+    <script>
+        if (confirm('Почати тестування?')) {
+            let nameList = [`Іван`, `Tom`, `Don`, `Іван`, `Hanna`]
+            let nameCount = 0
+            for (let i = 0; i < nameList.length; i++) {
+                if (nameList[i] === `Іван`) {
+                    nameCount++
+                }
+                
+            }
+            document.write(`ім’я «Іван» зустрічається ${nameCount}`)
+        }
+        
+    </script>
+</body>
+</html>

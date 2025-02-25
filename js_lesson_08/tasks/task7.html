@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 8</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Задача №7</h1>
+    <p>
+        Дано послідовність платіжок протягом року. Знайти сумарну кількість грошей за:
+        за весь рік;
+        у першій половині року;
+        у другій половині року;
+        за літо;
+        за ІІ квартал;
+         (з парними номерами);
+        за місяці, які є початковими у сезоні (весна, літо, осінь, зима).
+
+    </p>    за парні місяці
+        
+    <script>
+        if (confirm('Почати тестування?')) {
+            function getTotalSum() {
+                let sum = 0
+                for (let i = 0; i < arguments.length; i++) {
+                    sum += arguments[i]
+                }
+                return sum
+            }
+
+            function getSum1Half() {
+                let sum = 0
+                let half = arguments.length / 2
+                for (let i = 0; i < half; i++) {
+                    sum += arguments[i]
+                }
+                return sum
+            }
+
+            function getSum2Half() {
+                let sum = 0
+                let half = arguments.length / 2
+                for (let i = half; i < arguments.length; i++) {
+                    sum += arguments[i]
+                }
+                return sum
+            }
+
+            function getSumSummer() {
+                let sum = 0
+                let half = arguments.length / 2
+                for (let i = 5; i < 8; i++) {
+                    sum += arguments[i]
+                }
+                return sum
+            }
+
+            function getSum2Quarter() {
+                let sum = 0
+                let half = arguments.length / 2
+                for (let i = 3; i < 6; i++) {
+                    sum += arguments[i]
+                }
+                return sum
+            }
+
+            function getSumEven() {
+                let sum = 0
+                for (let i = 0; i < arguments.length; i++) {
+                    if (i%2 !== 0) {
+                        sum += arguments[i]
+                    }
+                    
+                }
+                return sum
+            }
+
+            function getSumStartSesson() {
+                let sum = 0
+                for (let i = 0; i < arguments.length; i+=3) {
+                    sum += arguments[i]
+                }
+                return sum
+            }
+            const s = getTotalSum(150, 200, 350, 20 )
+            const a = getSum1Half(150, 200, 350, 20 )
+            const b = getSum2Half(150, 200, 700, 333 )
+            const c = getSumSummer(150, 200, 700, 333, 102, 100, 100, 100, 103, 150, 160, 170 )
+            const d = getSum2Quarter(150, 200, 700, 555, 222, 111, 100, 100, 103, 150, 160, 170 )
+            const f = getSumEven(150, 2, 700, 2, 222, 2, 100, 2, 103, 2, 160, 2 )
+            const g = getSumStartSesson(1, 100, 700, 1, 300, 20, 1, 250, 103, 1, 160, 215 )
+            document.write(`сумарна кількість грошей за весь рік ${s}грн<br>`)
+            document.write(`сумарна кількість грошей у першій половині року ${a}грн<br>`)
+            document.write(`сумарна кількість грошей у другій половині року ${b}грн<br>`)
+            document.write(`сумарна кількість грошей за літо ${c}грн<br>`)
+            document.write(`сумарна кількість грошей за ІІ квартал ${d}грн<br>`)
+            document.write(`сумарна кількість грошей за парні місяці ${f}грн<br>`)
+            document.write(`сумарна кількість грошей за парні місяці ${g}грн<br>`)
+
+
+}
+
+    </script>
+</body>
+</html>
