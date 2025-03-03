@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 8</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Задача №5</h1>
+    <p>
+        Дано масив елементів. Знайти добуток додатних елементів
+    </p>    
+        
+    <script>
+        if (confirm('Почати тестування?')) {
+            
+            
+            function getAction() {
+                let productNumber = 1
+                for (const element of arr) {
+                    if (element > 0) productNumber*= element
+                }
+                document.write(productNumber)
+                return productNumber
+            }
+
+            let arr = [100, -120, 5, -50, 2, -150, -300]
+            let number = getAction
+            number(arr)
+            
+        }
+        
+    </script>
+</body>
+</html>

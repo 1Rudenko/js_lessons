@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 8</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Задача №1</h1>
+    <p>
+        Користувач вводить кількість елементів. Створити масив, що складається з вказаної кількості елементів заповнених нулями.
+    </p>    
+        
+    <script>
+        if (confirm('Почати тестування?')) {
+            
+            function getArr(el) {
+                let arr = new Array(el).fill(0)
+                document.write(`Масив: <br>${arr}`)
+                return arr
+            }
+
+            let userNumber = parseInt(prompt(`Введіть кількість елементів у масиві`))
+            getArr(userNumber)
+        }
+        
+    </script>
+</body>
+</html>

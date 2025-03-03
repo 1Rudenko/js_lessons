@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 8</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Задача №8</h1>
+    <p>
+        Дано масив номерів авто. Сформувати новий масив тих, які починаються на «А»
+    </p>    
+        
+    <script>
+        if (confirm('Почати тестування?')) {
+            let carNumber = [`AA2354KA`, `BA3353AC`, `AT5566KT`, `BE9384BE`, `AX7377KX`]
+            const newCArNumber = []
+
+            carNumber.forEach(element => {
+                if (element[0]===`A`) {
+                    newCArNumber.push(element)
+                }
+            });
+            
+            document.write(` масив номерів авто, які починаються на «А»: ${newCArNumber}`)
+
+
+
+
+        }
+        
+    </script>
+</body>
+</html>

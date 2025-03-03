@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 9</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Задача №4</h1>
+    <p>
+        Дано масив елементів. Вивести на екран елементи, що більші за 100
+    </p>    
+        
+    <script>
+        if (confirm('Почати тестування?')) {
+            let arr = [101, 120, 99, 50, 180, 150, 300]
+            // arr.forEach(el => {
+            //     if (el > 100) document.write(`${el} <br>`)
+            // });
+            for (const el of arr) {
+                if (el > 100) document.write(`${el} <br>`)
+            }
+        }
+        
+    </script>
+</body>
+</html>

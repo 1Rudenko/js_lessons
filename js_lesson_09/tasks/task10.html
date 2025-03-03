@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 8</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Задача №10</h1>
+    <p>
+        Дано масив цін у грн. Податок складає 20%. Сформувати масив, який буде містити величину сплаченого податку у грн.
+    </p>    
+        
+    <script>
+        if (confirm('Почати тестування?')) {
+            let arrayPraces = [120, 360, 480, 420, 600]
+            let taxRate = 20
+            const arrayTax = Array.from(
+                arrayPraces, 
+                (el) => el / ((100 + taxRate) / taxRate)
+            )
+
+            document.write(arrayTax)
+        }
+        
+    </script>
+</body>
+</html>
