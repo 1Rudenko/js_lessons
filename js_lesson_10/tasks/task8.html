@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 10</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Задача №8</h1>
+    <p>
+        Підрахувати кількість цін, що більше за 1000
+    </p>    
+        
+    <script>
+        if (confirm('Почати тестування?')) {
+            function getArray(number) {
+                let arrPrices = []
+                for (let i = 0; i < number; i++) {
+                    let pricePerOneMBond = 1 + Math.floor(Math.random()*10000 )
+                    arrPrices.push(pricePerOneMBond)
+                }
+                document.write(`масив цін на цінні папери ${arrPrices} <br>`)
+                return arrPrices
+            }
+
+
+            let mounthNumber = parseInt(prompt(`Введіть за який період (кількість місяців) потрібно проаналізувати ціни на цінні папери`))
+            let arrayStart = getArray(mounthNumber)
+
+            const numberPriceAbove1000 = arrayStart.reduce((prevNumber, el)=> el>1000? prevNumber + 1: prevNumber, 0)
+            document.write(`кількість цін, що більше за 1000 дорівнює ${numberPriceAbove1000}`)
+        }
+        
+    </script>
+</body>
+</html>

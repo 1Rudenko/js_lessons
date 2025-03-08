@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 10</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Задача №5</h1>
+    <p>
+        Підрахувати кількість змін цін
+    </p>    
+        
+    <script>
+        if (confirm('Почати тестування?')) {
+            
+            function getArray(number) {
+                let arrPrices = []
+                for (let i = 0; i < number; i++) {
+                    let pricePerOneMBond = 1 + Math.floor(Math.random()*10000 )
+                    arrPrices.push(pricePerOneMBond)
+                }
+                document.write(`масив цін на цінні папери ${arrPrices} <br>`)
+                return arrPrices
+            }
+
+
+            let mounthNumber = parseInt(prompt(`Введіть за який період (кількість місяців) потрібно проаналізувати ціни на цінні папери`))
+            let arrayStart = getArray(mounthNumber)
+            
+            let countChanges = 0
+            for (let i = 0; i < arrayStart.length; i++) {
+                if(arrayStart[i] !== arrayStart[i+1]) countChanges+=1    
+            }
+            document.write(countChanges)
+        }
+        
+    </script>
+</body>
+</html>
